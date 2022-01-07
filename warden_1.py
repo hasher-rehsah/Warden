@@ -20,4 +20,4 @@ while guess != password:
         print('you have', count, 'right')
         guess = input('Password:')
         count = 0
-print = input('Welcome warden. Press enter to exit')        
+print = input('Welcome warden. Press enter to exit')            
