@@ -1,25 +1,23 @@
 password = '2341'
-
-
-
-print('hello warden. Enter your 4 digit password')
+print('welcome warden. Enter your 4 digit password')
 guess = input('Password:')
+count = 0
 
-if guess == password:
-    print('welcome warden dont forget etc etc etc')
-    exit = input('press enter to exit. warning this will exit the program')
-    quit()
-     
-     
-     
+if len(guess) > 4 or len(guess) < 4:
+    print('Password must be 4 characters long')
+    guess = input('Password')
+
+
+
 while guess != password:
-    a=list(set(password)&set(guess))
-    count = 0
-    for x in a:
-        count = count +1
-    print('you have',count,'right')  
-    guess = input('Password:')
-    
-    
-print('welcome Warden etc etc etc')
-exit = input('press enter to exit. warning this will exit the program')
+    if len(guess) > 4 or len(guess) < 4:
+        print('Password must be 4 characters long')
+        guess = input('Password')
+    elif len(guess) == 4:
+        for i in range(len(password)):
+            if guess[i] == password[i]:
+                count = count + 1
+        print('you have', count, 'right')
+        guess = input('Password:')
+        count = 0
+print = input('Welcome warden. Press enter to exit')        
